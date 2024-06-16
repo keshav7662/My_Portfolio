@@ -5,18 +5,20 @@
     scroll-behavior: smooth;
     font-family: "Inter", sans-serif;
 }
+body {
+    background-color: #E3EDF7;
+}
+
+:root {
+    --box-shadow:
+        rgba(255, 255, 255, 1) -3px -6px 12px,
+        rgba(123, 169, 216, 0.2) 5px 5px 5px;
+}
 
 .side-text {
-    color: rgb(229, 235, 244);
+    color: rgb(241, 244, 247);
     text-shadow:
-        /* Light shadows for a soft glow */
-        1px 2px 2px hsl(180, 17%, 98%),
-        /* 1px 1px 1px hsl(180, 17%, 98%),
-    -1px 1px 1px hsl(180, 17%, 98%),
-    1px -1px 1px hsl(180, 17%, 98%),
-    -1px -1px 1px hsl(180, 17%, 98%), */
-
-        /* Darker shadows for 3D effect */
+        1px 2px 2px hsl(0, 0%, 100%),
         1px 1px 2px rgba(193, 190, 190, 0.2),
         2px 2px 4px rgba(193, 190, 190, 0.2),
         3px 3px 6px rgba(193, 190, 190, 0.2),
@@ -26,8 +28,83 @@
 .hire-me {
     background: rgb(243, 1, 123);
     background: linear-gradient(73deg, rgba(243, 1, 123, 1) 0%, rgba(99, 14, 179, 1) 99%, rgba(99, 14, 179, 1) 100%);
+    box-shadow: rgb(255, 255, 255) 5px 5px 15px,
+        rgba(255, 255, 255, 1) -5px -6px 15px;
 }
+
 .download-cv {
-    background: rgb(241,246,251);
-background: linear-gradient(109deg, rgba(241,246,251,1) 0%, rgba(253,253,255,1) 99%);
+    background: rgb(209, 227, 245);
+    background: linear-gradient(109deg, rgb(217, 232, 247) 0%, rgba(255, 255, 255, 1) 99%);
+    box-shadow: var(--box-shadow);
+}
+
+.ring-container {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.image-holder {
+    box-shadow:
+
+        0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    background: rgb(209, 227, 245);
+    background: linear-gradient(109deg, rgb(221, 234, 246) 0%, rgb(255, 254, 254) 99%);
+    box-shadow: var(--box-shadow);
+}
+
+
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid black;
+    animation: typing 6s steps(18, end) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0%,
+    10% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 18ch;
+    }
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+.chemical-icon {
+    box-shadow:
+    inset 1px 1px 3px rgba(0, 0, 0, 0.3), /* Dark shadow for top and left */
+    inset -5px -8px 3px rgba(255, 255, 255, 0.3);
+}
+.hover-animate a {
+    position: relative;
+}
+
+.hover-animate a::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: rgb(224, 37, 149);
+    transition: all .5s;
+}
+.hover-animate a:hover::before {
+    width: 100%;
 }

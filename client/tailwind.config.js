@@ -24,8 +24,8 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         'black-rgba': '#495B70',
-        'white-rgba':'#EDF3FA',
-        'title-rgba':'#E60280',
+        'white-rgba': '#EDF3FA',
+        'title-rgba': '#E60280',
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -69,11 +69,22 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        
+        typing: {
+          '0%, 10%': { width: '0' },
+          '70%, 90%': { width: '18ch' },
+        },
+        blink: {
+          '0%, 100%': { borderColor: 'transparent' },
+          '50%': { borderColor: 'black' },
+        },
+
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        typing: 'typing 10s steps(18, end) infinite',
+        blink: 'blink 0.75s step-end infinite',
+
       },
     },
   },
