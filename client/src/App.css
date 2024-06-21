@@ -108,3 +108,14 @@ body {
 .hover-animate a:hover::before {
     width: 100%;
 }
+
+.contact-form {
+    box-shadow: var(--box-shadow);
+}
+.skill-icon {
+    box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;
+}
+.blur {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+  }

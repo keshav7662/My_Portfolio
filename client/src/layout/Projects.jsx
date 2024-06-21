@@ -87,32 +87,38 @@ const Projects = () => {
     {
       title: "Quizzie",
       description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
-      images: [Quizzie, Quizzie2]
+      images: [Quizzie, Quizzie2],
+
     },
     {
       title: "HireZoom",
       description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
-      images: [HireZoom1, HireZoom3]
+      images: [HireZoom1, HireZoom3],
+
     },
     {
       title: "Credit-Card Generator",
-      description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet .",
-      images: [CreditCard, CreditCard2]
+      description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
+      images: [CreditCard, CreditCard2],
+
     },
     {
       title: "My Portfolio",
       description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
-      images: [Portfolio1, Portfolio2]
+      images: [Portfolio1, Portfolio2],
+
     },
     {
       title: "Pocket Notes",
       description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
-      images: [Notes1, Notes3]
+      images: [Notes1, Notes3],
+
     },
     {
       title: "Viz-Vista",
       description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
-      images: [Viz]
+      images: [Viz],
+
     }
   ];
 
@@ -120,36 +126,38 @@ const Projects = () => {
 
   return (
     <animated.section id="projects" style={springProps} ref={projectsRef}>
-      <div className="mx-auto bg-[#E3EDF7] py-10">
-        <h2 className='text-4xl md:text-6xl text-center font-bold mb-8'>My Creative <span className='text-title-rgba'>Works</span></h2>
-        <div className="flex flex-wrap flex-col md:flex-row justify-center items-center gap-8">
+      <div className="bg-[#E3EDF7]">
+        <h2 className='text-4xl md:text-6xl text-center font-bold my-8'>My Creative <span className='text-title-rgba'>Works</span></h2>
+        <div className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-8" data-aos="fade-up">
           {visibleProjects.map((project, index) => (
-            <div key={index} className="download-cv bg-gray-100 p-4 md:p-6 rounded-lg transition-transform transform hover:scale-105 w-[320px]  md:w-[500px] flex flex-col">
-              <div>
+            <div
+              key={index}
+              className="download-cv bg-gray-100 p-4 md:p-6 rounded-lg transition-transform transform hover:scale-95 duration-500 w-[320px] md:w-[500px] flex flex-col" data-aos="fade-up" data-aos-duration="2000">
+              <div data-aos="fade-up" data-aos-duration="2000">
                 <div className='chemical-icon bg-[#E3EDF7] inline-block text-center rounded-lg px-2 py-1 border-inherit'>
                   <h3 className="text-2xl text-gray-600 font-bold">{project.title}</h3>
                 </div>
               </div>
-              <div className='flex flex-col my-4 md:flex-row gap-3 md:gap-5'>
+              <div className='flex flex-col my-4 md:flex-row gap-3 md:gap-5' data-aos="fade-up" data-aos-duration="2000">
                 <div className='flex flex-col'>
                   <p className="text-sm">{project.description}</p>
                   <Button className='download-cv w-32 bg-gray-100 text-black text-xs font-bold rounded-sm hidden md:flex items-center mt-auto'>
                     Explore More <AddIcon className='ml-2 w-4 h-4' />
                   </Button>
                 </div>
-                <div className='flex flex-col justify-center bg-black p-2 rounded-md gap-[10px] min-h-[250px]'>
+                <div className='flex flex-col justify-center rounded-md gap-[10px] min-h-[250px]' data-aos="fade-up" data-aos-duration="2000">
                   {project.images.map((image, imgIndex) => (
                     <img
                       key={imgIndex}
                       src={image}
                       alt=""
-                      className='md:w-[1200px] h-[120px] cursor-pointer object-cover rounded-sm'
+                      className='md:w-[1200px] h-[120px] object-contain cursor-pointer rounded-sm md:hover:scale-110 duration-500'
                       onClick={() => openPopup(project.images, imgIndex)}
                     />
                   ))}
                 </div>
               </div>
-              <Button className='download-cv w-32 md:hidden bg-gray-100 text-black text-xs font-bold rounded-sm flex items-center mt-auto'>
+              <Button className='download-cv w-32 md:hidden bg-gray-100 text-black text-xs font-bold rounded-sm flex items-center mt-auto' data-aos="fade-up" data-aos-duration="2000">
                 Explore More <AddIcon className='ml-2 w-4 h-4' />
               </Button>
             </div>

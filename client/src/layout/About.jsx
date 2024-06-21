@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import { AboutMe, Ring } from '../assets/Svg';
 import { Button } from "@/components/ui/button";
 import { FaDownload } from "react-icons/fa";
+import Aos from 'aos';
 
 const About = () => {
+
+  Aos.init({
+    duration: 1000
+  });
+
   const [activeButton, setActiveButton] = useState('main-skills');
   const springProps = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 700 });
 
@@ -124,15 +130,15 @@ const About = () => {
   };
 
   return (
-    <animated.section id="about" style={springProps} className={'bg-[#E3EDF7'}>
+    <animated.section id="about" style={springProps} className={'bg-[#E3EDF7 h-screen'}  >
       <h2 className='text-4xl md:text-6xl ml-5 md:ml-32 my-5 font-bold'>
         Who I <span className='text-title-rgba'>am</span>
       </h2>
-      <div className="flex flex-col lg:flex-row ">
+      <div className="flex flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="2000">
         <div className='w-full lg:max-w-[600px] bg-black px-6'>
           <AboutMe className="w-full lg:w-[500px]" />
         </div>
-        <div className='my-5 mx-auto text-left max-w-[330px] lg:max-w-[400px] flex flex-col h-[500px] overflow-hidden'>
+        <div className=' mx-auto text-left max-w-[330px] lg:max-w-[400px] flex flex-col'>
           <p className='text-sm text-black font-bold'>
             My name's Keshav. I'm a web <span className='text-title-rgba'>designer</span> and developer based in East Champaran.
           </p>
@@ -142,7 +148,7 @@ const About = () => {
               Web <span className='text-title-rgba'>Development</span>.
             </p>
           </h1>
-          <div className='flex justify-center lg:justify-start items-center gap-2 md:gap-5 mt-5 px-2'>
+          <div className='flex justify-center lg:justify-start items-center gap-2 md:gap-5 my-5  px-2'>
             <Button
               className={`px-3 w-40 text-xs rounded-sm hover:scale-105 transform transition-transform duration-200 font-bold ${activeButton === 'main-skills' ? 'hire-me text-white duration-300' : 'download-cv text-black'}`}
               onClick={() => handleButtonClick('main-skills')}
@@ -163,7 +169,7 @@ const About = () => {
             </Button>
           </div>
           {/* Conditional content */}
-          <div className='my-5 flex flex-col overflow-y-auto'>
+          <div className=' flex flex-col overflow-y-auto'>
             {renderContent()}
           </div>
           {/* Conditional content */}
