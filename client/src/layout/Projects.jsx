@@ -86,41 +86,42 @@ const Projects = () => {
   const projects = [
     {
       title: "Quizzie",
-      description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
+      description: "Quizzie is a multi-format quiz-based full-stack application built using the MERN stack. It offers a variety of quiz formats and a seamless user experience.",
       images: [Quizzie, Quizzie2],
-
+      link: "https://quizzie-seven.vercel.app/"
     },
     {
       title: "HireZoom",
-      description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
+      description: "HireZoom is a job listing platform where recruiters can post jobs and job seekers can find their perfect match. It's designed to simplify the hiring process for both parties.",
       images: [HireZoom1, HireZoom3],
-
+      link: "https://hire-zoom.vercel.app/all-jobs"
     },
     {
       title: "Credit-Card Generator",
-      description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
+      description: "A beautiful UI to generate a credit card by filling out necessary details. The data gets loaded to the UI of the credit card, creating a visually appealing interface.",
       images: [CreditCard, CreditCard2],
-
+      link: "https://credit-card-generator-xdab.vercel.app/"
     },
     {
       title: "My Portfolio",
-      description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
+      description: "This is my personal portfolio website built using the MERN stack. It features cool JavaScript libraries for a visually appealing interface and includes features like responsiveness and live chat.",
       images: [Portfolio1, Portfolio2],
-
+      link: "https://keshavkumar.vercel.app/"
     },
     {
       title: "Pocket Notes",
-      description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
+      description: "Pocket Notes is a note-taking app where users can manage their notes, customize note cards, and ensure data persistence. It's designed for efficiency and ease of use.",
       images: [Notes1, Notes3],
-
+      link: "https://notestakingapp.vercel.app/"
     },
     {
       title: "Viz-Vista",
-      description: "Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.",
+      description: "Viz-Vista is a cutting-edge data visualization tool that transforms complex data into interactive visual insights, making data analysis more intuitive and engaging.",
       images: [Viz],
-
+      link: "https://sales-performance-gamma.vercel.app/"
     }
   ];
+
 
   const visibleProjects = showMore ? projects : projects.slice(0, 4);
 
@@ -132,7 +133,9 @@ const Projects = () => {
           {visibleProjects.map((project, index) => (
             <div
               key={index}
-              className="download-cv bg-gray-100 p-4 md:p-6 rounded-lg transition-transform transform hover:scale-95 duration-500 w-[320px] md:w-[500px] flex flex-col" data-aos="fade-up" data-aos-duration="2000">
+              className="download-cv bg-gray-100 p-4 md:p-6 rounded-lg transition-transform transform hover:scale-95 duration-500 w-[320px] md:w-[500px] flex flex-col cursor-pointer" data-aos="fade-up" data-aos-duration="2000"
+
+            >
               <div data-aos="fade-up" data-aos-duration="2000">
                 <div className='chemical-icon bg-[#E3EDF7] inline-block text-center rounded-lg px-2 py-1 border-inherit'>
                   <h3 className="text-2xl text-gray-600 font-bold">{project.title}</h3>
@@ -141,7 +144,10 @@ const Projects = () => {
               <div className='flex flex-col my-4 md:flex-row gap-3 md:gap-5' data-aos="fade-up" data-aos-duration="2000">
                 <div className='flex flex-col'>
                   <p className="text-sm">{project.description}</p>
-                  <Button className='download-cv w-32 bg-gray-100 text-black text-xs font-bold rounded-sm hidden md:flex items-center mt-auto'>
+                  <Button className='download-cv w-32 bg-gray-100 text-black text-xs font-bold rounded-sm hidden md:flex items-center mt-auto'
+                    onClick={() => window.open(project.link, "_blank")}
+
+                  >
                     Explore More <AddIcon className='ml-2 w-4 h-4' />
                   </Button>
                 </div>
@@ -152,12 +158,17 @@ const Projects = () => {
                       src={image}
                       alt=""
                       className='md:w-[1200px] h-[120px] object-contain cursor-pointer rounded-sm md:hover:scale-110 duration-500'
-                      onClick={() => openPopup(project.images, imgIndex)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openPopup(project.images, imgIndex);
+                      }}
                     />
                   ))}
                 </div>
               </div>
-              <Button className='download-cv w-32 md:hidden bg-gray-100 text-black text-xs font-bold rounded-sm flex items-center mt-auto' data-aos="fade-up" data-aos-duration="2000">
+              <Button className='download-cv w-32 md:hidden bg-gray-100 text-black text-xs font-bold rounded-sm flex items-center mt-auto' 
+                onClick={() => window.open(project.link, "_blank")}
+              >
                 Explore More <AddIcon className='ml-2 w-4 h-4' />
               </Button>
             </div>

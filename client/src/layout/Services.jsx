@@ -14,21 +14,22 @@ const Work = () => {
     const cards = [
         {
             title: 'App Development',
-            description: 'Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.',
+            description: 'Building robust, scalable mobile applications tailored to your business needs, ensuring seamless performance and user-friendly interfaces.',
         },
         {
             title: 'Web Development',
-            description: 'Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.',
+            description: 'Creating dynamic and responsive websites using the latest web technologies to provide optimal viewing experiences across devices.',
         },
         {
             title: 'Responsive Design',
-            description: 'Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.',
+            description: 'Designing visually appealing, adaptive interfaces that offer consistent and enjoyable user experiences on all screen sizes.',
         },
         {
             title: 'UI/UX Design',
-            description: 'Lorem veritatis natus aperiam maxime, incidunt quae? Necessitatibus suscipit illum quidem Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.',
+            description: 'Crafting intuitive and engaging user interfaces with a focus on enhancing user satisfaction through effective usability and aesthetics.',
         },
     ];
+
 
     const visibleCards = showMore ? cards : cards.slice(0, 3);
 
