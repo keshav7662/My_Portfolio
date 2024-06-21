@@ -130,11 +130,11 @@ const About = () => {
   };
 
   return (
-    <animated.section id="about" style={springProps} className={'bg-[#E3EDF7 h-screen'}  >
+    <animated.section id="about" style={springProps} className={'bg-[#E3EDF7'} data-aos="fade-up" data-aos-duration="1000" >
       <h2 className='text-4xl md:text-6xl ml-5 md:ml-32 my-5 font-bold'>
         Who I <span className='text-title-rgba'>am</span>
       </h2>
-      <div className="flex flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="2000">
+      <div className="flex flex-col lg:flex-row" >
         <div className='w-full lg:max-w-[600px] bg-black px-6'>
           <AboutMe className="w-full lg:w-[500px]" />
         </div>

@@ -32,7 +32,7 @@ const Skills = () => {
         >
           {
             skillsData.map((skill, id) => (
-              <div className="skills-container px-4 overflow-x-auto overflow-y-hidden no-scrollbar"  data-aos="fade-up" data-aos-duration="2000">
+              <div className="skills-container px-4 overflow-x-auto overflow-y-hidden no-scrollbar" >
                 <div key={id} className='w-[80px] h-[80px] md:w-[150px] md:h-[150px] download-cv flex justify-center items-center rounded-sm p-2'>
                   {skill}
                 </div>

@@ -47,7 +47,7 @@ const Work = () => {
                     What I <span className='text-title-rgba'>Do</span>
                 </h2>
                 <div className="flex flex-wrap justify-center  gap-8"  data-aos="fade-up" 
-                            data-aos-duration="2000">
+                            data-aos-duration="1000">
                     {visibleCards.map((card, index) => (
                         <div
                             key={index}

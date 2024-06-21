@@ -129,19 +129,19 @@ const Projects = () => {
     <animated.section id="projects" style={springProps} ref={projectsRef}>
       <div className="bg-[#E3EDF7]">
         <h2 className='text-4xl md:text-6xl text-center font-bold my-8'>My Creative <span className='text-title-rgba'>Works</span></h2>
-        <div className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-8" data-aos="fade-up">
+        <div className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-8" data-aos="fade-up" data-aos-duration="1000">
           {visibleProjects.map((project, index) => (
             <div
               key={index}
-              className="download-cv bg-gray-100 p-4 md:p-6 rounded-lg transition-transform transform hover:scale-95 duration-500 w-[320px] md:w-[500px] flex flex-col cursor-pointer" data-aos="fade-up" data-aos-duration="2000"
+              className="download-cv bg-gray-100 p-4 md:p-6 rounded-lg transition-transform transform hover:scale-95 duration-500 w-[320px] md:w-[500px] flex flex-col cursor-pointer" data-aos="fade-up" data-aos-duration="1000"
 
             >
-              <div data-aos="fade-up" data-aos-duration="2000">
+              <div >
                 <div className='chemical-icon bg-[#E3EDF7] inline-block text-center rounded-lg px-2 py-1 border-inherit'>
                   <h3 className="text-2xl text-gray-600 font-bold">{project.title}</h3>
                 </div>
               </div>
-              <div className='flex flex-col my-4 md:flex-row gap-3 md:gap-5' data-aos="fade-up" data-aos-duration="2000">
+              <div className='flex flex-col my-4 md:flex-row gap-3 md:gap-5'>
                 <div className='flex flex-col'>
                   <p className="text-sm">{project.description}</p>
                   <Button className='download-cv w-32 bg-gray-100 text-black text-xs font-bold rounded-sm hidden md:flex items-center mt-auto'
@@ -151,7 +151,7 @@ const Projects = () => {
                     Explore More <AddIcon className='ml-2 w-4 h-4' />
                   </Button>
                 </div>
-                <div className='flex flex-col justify-center rounded-md gap-[10px] min-h-[250px]' data-aos="fade-up" data-aos-duration="2000">
+                <div className='flex flex-col justify-center rounded-md gap-[10px] min-h-[250px]'>
                   {project.images.map((image, imgIndex) => (
                     <img
                       key={imgIndex}
