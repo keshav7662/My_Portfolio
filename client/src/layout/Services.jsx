@@ -1,15 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useSpring, animated } from '@react-spring/web';
 import { ChemicalIcon, AddIcon, UpIcon } from '../assets/Svg';
 import { Button } from "@/components/ui/button";
-import Aos from 'aos';
 
 const Work = () => {
     const [showMore, setShowMore] = useState(false);
-    const springProps = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 900 });
     const projectsRef = useRef(null);
 
-    Aos.init({});
 
     const cards = [
         {
@@ -41,17 +37,16 @@ const Work = () => {
     };
 
     return (
-        <animated.section id="services" style={springProps} ref={projectsRef} >
+        <section id="services"  ref={projectsRef} >
             <div className="mx-auto" >
                 <h2 className='text-4xl md:text-6xl my-8 text-center font-bold'>
                     What I <span className='text-title-rgba'>Do</span>
                 </h2>
-                <div className="flex flex-wrap justify-center  gap-8"  data-aos="fade-up" 
-                            data-aos-duration="1000">
+                <div className="flex flex-wrap justify-center  gap-8" >
                     {visibleCards.map((card, index) => (
                         <div
                             key={index}
-                            className="download-cv bg-gray-100 p-6 rounded-lg transition-transform transform hover:scale-105  w-[320px] md:w-[350px] min-h-[400px] flex flex-col"
+                            className="download-cv bg-gray-100 p-6 rounded-lg transition-transform transform hover:scale-105  w-[320px] md:w-[300px] xl:w-[350px] min-h-[400px] flex flex-col"
                            
                         >
                             <div className='chemical-icon bg-[#E3EDF7] h-16 w-16 rounded-lg p-2 border-inherit'>
@@ -75,7 +70,7 @@ const Work = () => {
                     </Button>
                 </div>
             </div>
-        </animated.section>
+        </section>
     );
 };
 

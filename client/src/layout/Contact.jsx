@@ -31,13 +31,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="px-2 md:px-4 h-screen" >
-      <h2 className="text-4xl md:text-6xl font-bold my-8 text-center">Get In <span className='text-title-rgba'>Touch</span></h2>
-      <div className='flex flex-col md:flex-row justify-center gap-5' data-aos="fade-up" data-aos-duration="1000">
-        <div className='contact-form w-full lg:max-w-[600px] bg-black px-6' data-aos="fade-up" data-aos-duration="1000">
-          <ContactForm className="w-full lg:w-[500px]" />
+    <section id="contact" className="p-2 md:p-4 " >
+      <h2 className="text-4xl md:text-6xl font-bold pb-10 text-center ">Get In <span className='text-title-rgba'>Touch</span></h2>
+      <div className='flex flex-col lg:flex-row justify-center gap-5' >
+        <div className='contact-form w-full bg-gray-400 px-6' >
+          <ContactForm className="w-full" />
         </div>
-        <div className="download-cv mx-auto text-center lg:w-[600px] p-6 md:p-10 rounded-sm">
+        <div className="download-cv mx-auto text-center w-full p-6 md:p-10 rounded-sm">
           <h2 className='font-bold text-4xl text-gray-600'>Contact Me</h2>
           <form className="max-w-lg mx-auto" onSubmit={handleSubmit}>
             <div className="mb-4">

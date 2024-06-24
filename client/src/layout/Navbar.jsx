@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useSpring, animated } from '@react-spring/web';
 import { IoLogoAmplify } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
 import { TiThMenu } from "react-icons/ti";
@@ -9,7 +8,6 @@ import { DarkMode } from '../assets/Svg'
 import { Link } from 'react-scroll'
 
 const Navbar = () => {
-  const springProps = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 300 });
   const [showNavDialog, setShowNavDialog] = useState(false);
 
   useEffect(() => {
@@ -66,8 +64,8 @@ const Navbar = () => {
   ];
 
   return (
-    <animated.header style={springProps} className={'fixed w-full z-20'}>
-      <nav className='flex justify-between items-center bg-white-rgba text-black-rgba px-6 py-4 '>
+    <navbar className={'fixed top-0 w-full z-20'}>
+      <nav className='flex justify-between items-center bg-white-rgba text-black-rgba px-6  py-4 '>
         <a href='#home' className='flex items-center gap-2 cursor-pointer' onClick={handleRedirectHome}>
           <IoLogoAmplify size={32} />
           <h1 className="text-3xl font-bold hidden md:block">Keshav</h1>
@@ -77,7 +75,7 @@ const Navbar = () => {
             links.map((link, i) => (
               <Link
                 to={link.address}
-                offset={-100}
+                offset={-80}
                 className='cursor-pointer'
               >
                 {link.link}
@@ -115,7 +113,7 @@ const Navbar = () => {
               links.map((link, i) => (
                 <Link
                   to={link.address}
-                  offset={-100}
+                  offset={-80}
                   // smooth={true}
                   duration={2000}
                   onClick={() => handleLinkClick(link.address)}
@@ -134,7 +132,7 @@ const Navbar = () => {
           </Button>
         </div>
       </nav>
-    </animated.header>
+    </navbar>
   );
 };
 

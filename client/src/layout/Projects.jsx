@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { useSpring, animated } from '@react-spring/web';
 import { ChemicalIcon, AddIcon, UpIcon } from '../assets/Svg';
 import { Button } from "@/components/ui/button";
 import Quizzie from '../assets/projects/Quizzie.png';
@@ -53,7 +52,6 @@ const ImagePopup = ({ images, currentIndex, onClose, onPrev, onNext }) => {
 };
 
 const Projects = () => {
-  const springProps = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 900 });
   const [popupState, setPopupState] = useState({ images: [], index: null });
   const [showMore, setShowMore] = useState(false);
   const projectsRef = useRef(null);
@@ -126,14 +124,14 @@ const Projects = () => {
   const visibleProjects = showMore ? projects : projects.slice(0, 4);
 
   return (
-    <animated.section id="projects" style={springProps} ref={projectsRef}>
+    <section id="projects"  ref={projectsRef}>
       <div className="bg-[#E3EDF7]">
         <h2 className='text-4xl md:text-6xl text-center font-bold my-8'>My Creative <span className='text-title-rgba'>Works</span></h2>
-        <div className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-8" data-aos="fade-up" data-aos-duration="1000">
+        <div className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-8" >
           {visibleProjects.map((project, index) => (
             <div
               key={index}
-              className="download-cv bg-gray-100 p-4 md:p-6 rounded-lg transition-transform transform hover:scale-95 duration-500 w-[320px] md:w-[500px] flex flex-col cursor-pointer" data-aos="fade-up" data-aos-duration="1000"
+              className="download-cv bg-gray-100 p-4 md:p-6 rounded-lg transition-transform transform hover:scale-95 duration-500 w-[320px] md:w-[350px] lg:w-[450px] xl:w-[550px] flex flex-col cursor-pointer" 
 
             >
               <div >
@@ -194,7 +192,7 @@ const Projects = () => {
         onPrev={prevImage}
         onNext={nextImage}
       />
-    </animated.section>
+    </section>
   );
 };
 
