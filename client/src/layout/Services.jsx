@@ -6,7 +6,6 @@ const Work = () => {
     const [showMore, setShowMore] = useState(false);
     const projectsRef = useRef(null);
 
-
     const cards = [
         {
             title: 'App Development',
@@ -37,7 +36,7 @@ const Work = () => {
     };
 
     return (
-        <section id="services"  ref={projectsRef} >
+        <section id="services" ref={projectsRef} >
             <div className="mx-auto" >
                 <h2 className='text-4xl md:text-6xl my-8 text-center font-bold'>
                     What I <span className='text-title-rgba'>Do</span>
@@ -47,7 +46,7 @@ const Work = () => {
                         <div
                             key={index}
                             className="download-cv bg-gray-100 p-6 rounded-lg transition-transform transform hover:scale-105  w-[320px] md:w-[300px] xl:w-[350px] min-h-[400px] flex flex-col"
-                           
+
                         >
                             <div className='chemical-icon bg-[#E3EDF7] h-16 w-16 rounded-lg p-2 border-inherit'>
                                 <ChemicalIcon className='h-full w-full' />

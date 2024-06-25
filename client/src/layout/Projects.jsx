@@ -125,7 +125,7 @@ const Projects = () => {
 
   return (
     <section id="projects"  ref={projectsRef}>
-      <div className="bg-[#E3EDF7]">
+
         <h2 className='text-4xl md:text-6xl text-center font-bold my-8'>My Creative <span className='text-title-rgba'>Works</span></h2>
         <div className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-8" >
           {visibleProjects.map((project, index) => (
@@ -182,7 +182,6 @@ const Projects = () => {
             {showMore ? <UpIcon className='ml-2 w-4 h-4' /> : <AddIcon className='ml-2 w-4 h-4' />}
           </Button>
         </div>
-      </div>
 
       {/* Image Popup */}
       <ImagePopup

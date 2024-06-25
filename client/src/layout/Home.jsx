@@ -14,7 +14,7 @@ import { Link } from 'react-scroll'
 
 
 const Home = () => {
- 
+
   return (
     <section
       id="home"
@@ -41,8 +41,8 @@ const Home = () => {
             Skilled in MongoDB, Express.js, React.js, and Node.js, I build robust and scalable solutions.
             I'm a Full Stack MERN Developer with a passion for creating dynamic, responsive web applications.
           </p>
-          <div className='flex justify-center lg:justify-start items-center gap-5 mt-10 '> 
-            <Link to='contact'  offset={-1} className='hire-me py-3 px-8 rounded-sm text-xs cursor-pointer text-white '>
+          <div className='flex justify-center lg:justify-start items-center gap-5 mt-10 '>
+            <Link to='contact' offset={-1} className='hire-me py-3 px-8 rounded-sm text-xs cursor-pointer text-white '>
               Hire Me
             </Link>
             <a

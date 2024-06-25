@@ -4,9 +4,6 @@ import { Button } from "@/components/ui/button";
 import { FaDownload } from "react-icons/fa";
 
 const About = () => {
-
-
-
   const [activeButton, setActiveButton] = useState('experience');
 
   const handleButtonClick = (button) => {
@@ -17,35 +14,6 @@ const About = () => {
     switch (activeButton) {
       case 'main-skills':
         return (
-          // <>
-          //   <div className='flex gap-2'>
-          //     <div className='h-3 mt-0.5'>
-          //       <Ring className='h-full' />
-          //     </div>
-          //     <div>
-          //       <h2 className='font-extrabold text-xs md:text-sm'>Software Development</h2>
-          //       <p className='text-xs text-gray-700 my-1 font-semibold '>Creating reliable and efficient software solutions that meet user needs and business goals.</p>
-          //     </div>
-          //   </div>
-          //   <div className='flex gap-2'>
-          //     <div className='h-3 mt-0.5'>
-          //       <Ring className='h-full' />
-          //     </div>
-          //     <div>
-          //       <h2 className='font-extrabold text-xs Md:text-sm'>Web Development</h2>
-          //       <p className='text-xs text-gray-700 my-1 font-semibold '>Building dynamic, responsive, and user-friendly web applications that provide seamless user experiences.</p>
-          //     </div>
-          //   </div>
-          //   <div className='flex gap-2'>
-          //     <div className='h-3 mt-0.5'>
-          //       <Ring className='h-full' />
-          //     </div>
-          //     <div>
-          //       <h2 className='font-extrabold text-xs md:text-sm'>Responsive Design</h2>
-          //       <p className='text-xs text-gray-700 mt-1 font-semibold '>Ensuring web applications are fully responsive and adapt smoothly to various devices and screen sizes, enhancing accessibility and user engagement.</p>
-          //     </div>
-          //   </div>
-          // </>
           <>
             <div className='flex gap-2'>
               <div className='h-3 mt-0.5'>
@@ -114,7 +82,7 @@ const About = () => {
         );
       case 'education':
         return (
-          
+
           <>
             <div className='flex gap-2'>
               <div className='h-3 mt-0.5'>
@@ -200,10 +168,7 @@ const About = () => {
             </div>
           </div>
         </div>
-
       </div>
-
-
     </section>
   );
 };
