@@ -927,7 +927,7 @@ export const ReactJs = (props) => (
   </svg>
 );
 
-export const ContactForm = (props) => (
+export const ContactFormSvg = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     data-name="Layer 1"

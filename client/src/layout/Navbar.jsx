@@ -114,7 +114,7 @@ const Navbar = () => {
                 <Link
                   to={link.address}
                   offset={-80}
-                  // smooth={true}
+                  smooth={true}
                   duration={2000}
                   onClick={() => handleLinkClick(link.address)}
                   style={{ transitionDelay: `${i + 3}00ms` }}

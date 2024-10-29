@@ -15,99 +15,145 @@ const About = () => {
       case 'main-skills':
         return (
           <>
-            <div className='flex gap-2'>
-              <div className='h-3 mt-0.5'>
-                <Ring className='h-full' />
-              </div>
+            {/* Skill 1: Software Development */}
+            <div className='flex gap-3 items-start'>
+              <Ring className='w-4 h-4 mt-1.5' />
               <div>
-                <h2 className='font-extrabold text-xs md:text-sm'>Software Development</h2>
-                <p className='text-xs text-gray-600 my-1 font-semibold'>Creating reliable and efficient software solutions that meet user needs and business goals.</p>
-              </div>
-            </div>
-            <div className='flex gap-2'>
-              <div className='h-3 mt-0.5'><Ring className='h-full' /></div>
-              <div>
-                <h2 className='font-extrabold text-xs md:text-sm'>Web Development</h2>
-                <p className='text-xs text-gray-600 my-1 font-semibold'>Building dynamic, responsive, and user-friendly web applications that provide seamless user experiences.</p>
+                <h2 className='font-extrabold text-sm md:text-base'>Software Development</h2>
+                <p className='text-xs text-gray-600 my-2 font-medium leading-snug'>
+                  Expertise in creating <span className='font-bold'>efficient, scalable, and reliable software solutions</span> that address business challenges. Proficient in <span className='font-bold'>Java</span>, <span className='font-bold'>Spring Boot</span>, and <span className='font-bold'>JUnit</span> for unit testing, with experience in implementing <span className='font-bold'>Agile methodologies</span> for continuous development and delivery.
+                </p>
               </div>
             </div>
-            <div className='flex gap-2'>
-              <div className='h-3 mt-0.5'><Ring className='h-full' /></div>
+
+            {/* Skill 2: Web Development */}
+            <div className='flex gap-3 items-start'>
+              <Ring className='w-4 h-4 mt-1.5' />
               <div>
-                <h2 className='font-extrabold text-xs md:text-sm'>Responsive Design</h2>
-                <p className='text-xs text-gray-600 my-1 font-semibold'>Ensuring web applications are fully responsive and adapt smoothly to various devices and screen sizes, enhancing accessibility and user engagement.</p>
+                <h2 className='font-extrabold text-sm md:text-base'>Web Development</h2>
+                <p className='text-xs text-gray-600 my-2 font-medium leading-snug'>
+                  Proficient in <span className='font-bold'>front-end and back-end development</span> using <span className='font-bold'>React.js</span>, <span className='font-bold'>Node.js</span>, and <span className='font-bold'>RESTful APIs</span> to create dynamic, data-driven applications. Adept at crafting <span className='font-bold'>responsive, user-centric interfaces</span> with <span className='font-bold'>HTML5, CSS3</span>, and <span className='font-bold'>JavaScript</span>.
+                </p>
+              </div>
+            </div>
+
+            {/* Skill 3: Responsive Design */}
+            <div className='flex gap-3 items-start'>
+              <Ring className='w-4 h-4 mt-1.5' />
+              <div>
+                <h2 className='font-extrabold text-sm md:text-base'>Responsive Design</h2>
+                <p className='text-xs text-gray-600 my-2 font-medium leading-snug'>
+                  Skilled in designing fully <span className='font-bold'>responsive web applications</span> that adapt seamlessly to different devices and screen sizes, ensuring <span className='font-bold'>optimal user experiences</span> across <span className='font-bold'>mobile, tablet, and desktop platforms</span> using frameworks like <span className='font-bold'>Tailwind CSS</span> and <span className='font-bold'>Bootstrap</span>.
+                </p>
               </div>
             </div>
           </>
+
         );
       case 'experience':
         return (
           <>
-            <div className='flex gap-2'>
-              <div className='h-3 mt-0.5'>
-                <Ring className='h-full' />
-              </div>
+            {/* Experience 1 */}
+            <div className='flex gap-3 items-start'>
+              <Ring className='w-4 h-4 mt-1.5' />
               <div>
-                <h2 className='font-extrabold text-xs md:text-sm'>Software Development Engineer - 1</h2>
-                <p className='text-sm text-gray-800 font-bold my-1'>
-                  <span className=' text-title-rgba'>tailBoost.ai</span>
-                  <span className='text-xs text-gray-500 ml-2 font-semibold'>Apr 2024 - Jun 2024</span>
+                <h2 className='font-extrabold text-sm md:text-base'>Associate Software Engineer</h2>
+                <div className='flex items-center text-sm text-gray-800 font-bold my-1'>
+                  <span className='text-title-rgba'>Mphasis Ltd.</span>
+                  <span className='text-xs text-gray-500 ml-3 font-semibold'>Jun 2023 - Oct 2024</span>
+                </div>
+                <p className='text-xs text-gray-600 my-2 font-medium leading-snug'>
+                  Developed and maintained <span className='font-bold'>responsive React.js interfaces</span> and collaborated on unit testing using <span className='font-bold'>JUnit</span>.
+                  Played a key role in enhancing user experience and performance optimizations.
                 </p>
-                <p className='text-xs text-gray-600 my-1 font-semibold'>Worked on integrating ad control functionalities into Shopify stores' post-checkout pages.</p>
               </div>
             </div>
-            <div className='flex gap-2'>
-              <div className='h-3 mt-0.5'><Ring className='h-full' /></div>
+
+            {/* Experience 2 */}
+            <div className='flex gap-3 items-start'>
+              <Ring className='w-4 h-4 mt-1.5' />
               <div>
-                <h2 className='font-extrabold text-xs md:text-sm'>Fullstack Developer - Trainee</h2>
-                <p className='text-sm text-gray-800 font-bold my-1'>
-                  <span className=' text-title-rgba'>Cuvette</span>
-                  <span className='text-xs text-gray-500 ml-2 font-semibold'>Aug 2023 - Jan 2024</span>
+                <h2 className='font-extrabold text-sm md:text-base'>Software Development Engineer - 1</h2>
+                <div className='flex items-center text-sm text-gray-800 font-bold my-1'>
+                  <span className='text-title-rgba'>tailBoost.ai <i className='text-gray-500'>(now ShopLinks)</i></span>
+                  <span className='text-xs text-gray-500 ml-3 font-semibold'>Apr 2024 - May 2024</span>
+                </div>
+                <p className='text-xs text-gray-600 my-2 font-medium leading-snug'>
+                  Led the integration of <span className='font-bold'>ad control functionalities</span> into Shopify stores' post-checkout pages, improving post-purchase engagement and monetization for clients.
                 </p>
-                <p className='text-xs text-gray-600 my-1 font-semibold'>Built responsive interfaces with React.js and conducted unit testing.</p>
               </div>
             </div>
-            <div className='flex gap-2'>
-              <div className='h-3 mt-0.5'><Ring className='h-full' /></div>
+
+            {/* Experience 3 */}
+            <div className='flex gap-3 items-start'>
+              <Ring className='w-4 h-4 mt-1.5' />
               <div>
-                <h2 className='font-extrabold text-xs md:text-sm'>Fullstack Developer - Intern</h2>
-                <p className='text-sm text-gray-800 font-bold my-1'>
+                <h2 className='font-extrabold text-sm md:text-base'>Fullstack Developer - Intern</h2>
+                <div className='flex items-center text-sm text-gray-800 font-bold my-1'>
                   <span className='text-title-rgba'>Solitaire Infosys</span>
-                  <span className='text-xs text-gray-500 ml-2 font-semibold'>Jan 2022 - Jun 2022</span>
+                  <span className='text-xs text-gray-500 ml-3 font-semibold'>Jan 2022 - Jun 2022</span>
+                </div>
+                <p className='text-xs text-gray-600 my-2 font-medium leading-snug'>
+                  Contributed to the development of <span className='font-bold'>web applications</span> and managed database operations using <span className='font-bold'>MySQL</span>.
+                  Assisted in backend integration using <span className='font-bold'>Node.js</span>.
                 </p>
-                <p className='text-xs text-gray-600 my-1 font-semibold'>Assisted in developing web applications and managing databases.</p>
               </div>
             </div>
           </>
+
         );
       case 'education':
         return (
-
           <>
-            <div className='flex gap-2'>
-              <div className='h-3 mt-0.5'>
-                <Ring className='h-full' />
-              </div>
+            {/* Bachelor's Degree */}
+            <div className='flex gap-3 items-start'>
+              <Ring className='w-4 h-4 mt-1.5' />
               <div>
-                <h2 className='font-extrabold text-xs md:text-sm'>Bachelor of Technology - <span className='text-xs text-gray-500 my-1 font-semibold '>2018-2022</span></h2>
-                <p className='text-xs text-gray-600 my-1 font-semibold'>Chandigarh Group of Colleges, Mohali, Punjab.</p>
+                <h2 className='font-extrabold text-sm md:text-base'>
+                  Bachelor of Technology (B.Tech)
+                  <span className='text-xs text-gray-500 font-semibold ml-3'>2018 - 2022</span>
+                </h2>
+                <p className='text-xs text-gray-600 my-2 font-medium'>
+                  <span className='font-bold'>Chandigarh Group of Colleges</span>, Mohali, Punjab
+                </p>
+                <p className='text-xs text-gray-600 my-1'>
+                  Relevant courses: <span className='font-semibold'>Data Structures, Algorithms, Software Engineering, Web Development</span>.
+                </p>
               </div>
             </div>
-            <div className='flex gap-2'>
-              <div className='h-3 mt-0.5'><Ring className='h-full' /></div>
+
+            {/* High School */}
+            <div className='flex gap-3 items-start'>
+              <Ring className='w-4 h-4 mt-1.5' />
               <div>
-                <h2 className='font-extrabold text-xs md:text-sm'>Senior Secondary School - XII - <span className='text-xs text-gray-500 my-1 font-semibold '>2016-2018</span></h2>
-                <p className='text-xs text-gray-600 my-1 font-semibold'>K.T College, East Champaran, Bihar.</p>
+                <h2 className='font-extrabold text-sm md:text-base'>
+                  Senior Secondary School - XII
+                  <span className='text-xs text-gray-500 font-semibold ml-3'>2016 - 2018</span>
+                </h2>
+                <p className='text-xs text-gray-600 my-2 font-medium'>
+                  <span className='font-bold'>K.T College</span>, East Champaran, Bihar
+                </p>
+                <p className='text-xs text-gray-600 my-1'>
+                  Majored in Science (Physics, Chemistry, Mathematics).
+                </p>
               </div>
             </div>
-            <div className='flex gap-2'>
-              <div className='h-3 mt-0.5'><Ring className='h-full' /></div>
+
+            {/* Secondary School */}
+            <div className='flex gap-3 items-start'>
+              <Ring className='w-4 h-4 mt-1.5' />
               <div>
-                <h2 className='font-extrabold text-xs md:text-sm'>Secondary School - X - <span className='text-xs text-gray-500 my-1 font-semibold '>2015</span></h2>
-                <p className='text-xs text-gray-600 my-1 font-semibold'>Shantiniketan Jubilee School, East Champaran, Bihar.</p>
+                <h2 className='font-extrabold text-sm md:text-base'>
+                  Secondary School - X
+                  <span className='text-xs text-gray-500 font-semibold ml-3'>2015</span>
+                </h2>
+                <p className='text-xs text-gray-600 my-2 font-medium'>
+                  <span className='font-bold'>Shantiniketan Jubilee School</span>, East Champaran, Bihar
+                </p>
               </div>
             </div>
           </>
+
         );
       default:
         return null;
@@ -162,8 +208,16 @@ const About = () => {
               {/* Fixed button */}
               <div className='mt-auto py-5'>
                 <Button className='w-36 text-black bg-transparent border border-black rounded-sm text-xs font-bold hover:bg-black hover:text-white'>
-                  Download CV <FaDownload className='ml-3' />
+                  <a
+                    href='https://drive.google.com/file/d/1x3JAVagOEKxxGTBTsgLE_uFHYICFxFqc/view?usp=drive_link'
+                    target='_blank'
+                    download
+                    className="flex items-center justify-center"
+                  >
+                    Download CV <FaDownload className='ml-2' />
+                  </a>
                 </Button>
+
               </div>
             </div>
           </div>

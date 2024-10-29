@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
-import { ContactForm } from '../assets/Svg';
+import { ContactFormSvg } from '../assets/Svg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { saveContact } from '@/services/ContactFormService';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +24,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast.warning('Under Progress!');
+    
+    saveContact(formData);
     setFormData({
       name: '',
       email: '',
@@ -35,7 +38,7 @@ const Contact = () => {
       <h2 className="text-4xl md:text-6xl font-bold pb-10 text-center ">Get In <span className='text-title-rgba'>Touch</span></h2>
       <div className='flex flex-col lg:flex-row justify-center gap-5' >
         <div className='contact-form w-full bg-gray-400 px-6' >
-          <ContactForm className="w-full" />
+          <ContactFormSvg className="w-full" />
         </div>
         <div className="download-cv mx-auto text-center w-full p-6 md:p-10 rounded-sm">
           <h2 className='font-bold text-4xl text-gray-600'>Contact Me</h2>
