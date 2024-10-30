@@ -7,13 +7,16 @@ export const saveContact = async (formData) => {
   try {
     const response = await axios.post(`${backendUrl}/save`, formData);
     console.log(response.data);
-    toast.success(response.data.message,{
-      duration:3000
-    });
+    if (response) {
+      toast.success(response.data.message, {
+        duration: 3000
+      });
+    }
+
   } catch (error) {
     console.log(error);
-    toast.error(error.response.data.message,{
-      duration:3000
+    toast.error(error.response.data.message, {
+      duration: 3000
     });
   }
 

@@ -6,6 +6,7 @@ import { ContactFormSvg } from '../assets/Svg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveContact } from '@/services/ContactFormService';
+import Loader from '../layoutComponents/Loader'
 
 
 const Contact = () => {
@@ -14,6 +15,7 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false); 
 
   const handleChange = (e) => {
     setFormData({
@@ -22,22 +24,25 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    saveContact(formData);
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    setLoading(true); 
+
+    try {
+      await saveContact(formData); 
+      setFormData({ name: '', email: '', message: '' }); 
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false); 
+    }
   };
 
   return (
-    <section id="contact" className="p-2 md:p-4 " >
-      <h2 className="text-4xl md:text-6xl font-bold pb-10 text-center ">Get In <span className='text-title-rgba'>Touch</span></h2>
-      <div className='flex flex-col lg:flex-row justify-center gap-5' >
-        <div className='contact-form w-full bg-gray-400 px-6' >
+    <section id="contact" className="p-2 md:p-4">
+      <h2 className="text-4xl md:text-6xl font-bold pb-10 text-center">Get In <span className='text-title-rgba'>Touch</span></h2>
+      <div className='flex flex-col lg:flex-row justify-center gap-5'>
+        <div className='contact-form w-full bg-gray-400 px-6'>
           <ContactFormSvg className="w-full" />
         </div>
         <div className="download-cv mx-auto text-center w-full p-6 md:p-10 rounded-sm">
@@ -55,8 +60,13 @@ const Contact = () => {
               <label className="block text-left mb-2" htmlFor="message">Message:</label>
               <textarea className="w-full p-2 border border-gray-300 rounded" name="message" value={formData.message} onChange={handleChange}></textarea>
             </div>
-            <button className="hire-me w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600" type="submit">Send</button>
+            <button className="hire-me w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600" type="submit" disabled={loading}>
+              {loading ? 'Sending...' : 'Send'}
+            </button>
           </form>
+          <div className='mt-4'>
+           { loading && <Loader />}
+          </div>
           <div className='flex justify-center w-full'>
             <div className='w-28 h-10 md:w-36 md:h-10 lg:w-60 lg:h-14 flex items-center justify-center gap-5 px-2 rounded-sm cursor-pointer my-10'>
               <a href="https://github.com/keshav7662" target="_blank" rel="noopener noreferrer" className='text-gray-600 hover:text-gray-800 hover:scale-110 duration-200 border border-gray-400 hover:border-gray-800 rounded-full p-1'>
