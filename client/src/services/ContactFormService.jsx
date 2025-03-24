@@ -5,7 +5,7 @@ const backendUrl = import.meta.env.VITE_BACKEND_BASE_URL;
 
 export const saveContact = async (formData) => {
   try {
-    const response = await axios.post(`${backendUrl}/save`, formData);
+    const response = await axios.post(`${backendUrl}/contact/save`, formData);
     console.log(response.data);
     if (response) {
       toast.success(response.data.message, {
