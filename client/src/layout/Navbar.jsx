@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { IoLogoAmplify } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
 import { TiThMenu } from "react-icons/ti";
-import { FiAlignRight } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
-import { DarkMode } from '../assets/Svg'
 import { Link } from 'react-scroll'
+import { Settings } from "lucide-react";
 
 const Navbar = () => {
   const [showNavDialog, setShowNavDialog] = useState(false);
-
+  const [hover, setHover] = useState(false);
   useEffect(() => {
     if (showNavDialog) {
       document.body.style.overflow = 'hidden';
@@ -35,6 +34,9 @@ const Navbar = () => {
     window.location.hash = address;
     setShowNavDialog(false);
   };
+  const handleOpenAdmin = () => {
+    window.open("/admin", "_blank");
+  }
 
   const links = [
     {
@@ -87,10 +89,24 @@ const Navbar = () => {
 
         <div>
           <TiThMenu size={32} className='text-gray-900 lg:hidden' onClick={handleMenu} />
-          <Button className='hidden lg:flex items-center gap-3'>
-            Let's Chat
-            <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/FFFFFF/speech-bubble-with-dots.png" alt="speech-bubble-with-dots" />
-          </Button>
+          <div
+            className="relative inline-block cursor-pointer"
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            onClick={handleOpenAdmin}
+          >
+            {/* Settings Icon */}
+            <div className="p-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700 transition">
+              <Settings size={20} />
+            </div>
+
+            {/* Tooltip (Appears Below the Button) */}
+            {hover && (
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-md shadow-md">
+                Admin
+              </div>
+            )}
+          </div>
         </div>
 
         {/* sidebar */}

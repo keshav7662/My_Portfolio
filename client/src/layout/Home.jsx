@@ -56,14 +56,14 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
           >
-            <Link to='contact' offset={-1} className='hire-me py-3 px-8 rounded-sm text-xs cursor-pointer text-white '>
+            <Link to='contact' offset={-1} className='hire-me py-3 px-8 rounded-sm text-xs cursor-pointer text-white hover:scale-105 duration-300'>
               Hire Me
             </Link>
             <a
               href='https://drive.google.com/file/d/1x3JAVagOEKxxGTBTsgLE_uFHYICFxFqc/view?usp=drive_link'
               target='_blank'
               download
-              className='download-cv text-black text-xs font-semibold rounded-sm flex items-center p-3'
+              className='download-cv text-black text-xs font-semibold rounded-sm flex items-center p-3 hover:scale-105 duration-300'
             >
               Download CV <FaDownload className='ml-3' />
             </a>
