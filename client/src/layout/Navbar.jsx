@@ -35,7 +35,7 @@ const Navbar = () => {
     setShowNavDialog(false);
   };
   const handleOpenAdmin = () => {
-    window.open("/admin", "_blank");
+    window.open("/admin/login", "_blank");
   }
 
   const links = [
