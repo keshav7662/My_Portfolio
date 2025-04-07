@@ -103,5 +103,11 @@ export const uiUxProjects = [
     "image": "https://keshav7662.github.io/Frontend_Showcase/DestinationCard/output.png",
     "liveLink": "https://keshav7662.github.io/Frontend_Showcase/DestinationCard"
   },
+  {
+    "name": "Fylla",
+    "folder": "Fylla",
+    "image": "https://keshav7662.github.io/Fylla-Let-the-design-speak./output.png",
+    "liveLink": "https://keshav7662.github.io/Fylla-Let-the-design-speak./"
+  },
 ]
   ;
