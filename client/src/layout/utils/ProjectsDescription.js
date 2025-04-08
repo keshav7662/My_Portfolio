@@ -109,5 +109,11 @@ export const uiUxProjects = [
     "image": "https://keshav7662.github.io/Fylla-Let-the-design-speak./output.png",
     "liveLink": "https://keshav7662.github.io/Fylla-Let-the-design-speak./"
   },
+  {
+    "name": "Resposnsive Grid Ui",
+    "folder": "Fylla",
+    "image": "https://keshav7662.github.io/Frontend_Showcase/ResponsiveGridUI/output.png",
+    "liveLink": "https://keshav7662.github.io/Frontend_Showcase/ResponsiveGridUI/"
+  },
 ]
   ;
