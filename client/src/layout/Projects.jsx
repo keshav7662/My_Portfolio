@@ -111,7 +111,7 @@ const Projects = () => {
                 {uiUxProjects.map((project, index) => (
                   <div
                     key={index}
-                    className="w-[300px] h-[200px] mx-4 rounded-lg overflow-hidden relative group download-cv p-4"
+                    className="w-[300px] h-[200px] mx-4 rounded-lg overflow-hidden relative group download-cv p-2"
                   >
                     {/* Project Image */}
                     <img

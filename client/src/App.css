@@ -63,10 +63,12 @@
 }
 
 @keyframes typing {
+
     0%,
     10% {
         width: 0;
     }
+
     70%,
     90% {
         width: 18ch;
@@ -87,14 +89,16 @@
 
 .chemical-icon {
     box-shadow:
-    inset 1px 1px 3px rgba(0, 0, 0, 0.3), /* Dark shadow for top and left */
-    inset -5px -8px 3px rgba(255, 255, 255, 0.3);
+        inset 1px 1px 3px rgba(0, 0, 0, 0.3),
+        /* Dark shadow for top and left */
+        inset -5px -8px 3px rgba(255, 255, 255, 0.3);
 }
+
 .hover-animate a {
     position: relative;
 }
 
-.hover-animate a::before{
+.hover-animate a::before {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -104,6 +108,7 @@
     background-color: rgb(224, 37, 149);
     transition: all .5s;
 }
+
 .hover-animate a:hover::before {
     width: 100%;
 }
@@ -111,10 +116,12 @@
 .contact-form {
     box-shadow: var(--box-shadow);
 }
+
 .skill-icon {
     box-shadow: rgba(245, 101, 57, 0.3) 0px 0px 30px;
 }
+
 .blur {
     filter: blur(5px);
     transition: filter 0.3s ease;
-  }
+}
